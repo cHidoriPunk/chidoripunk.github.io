@@ -1,4 +1,4 @@
-@import 'base';
+@use 'base' as *;
 
 html, body { transition: background-color .75s ease; // for dark mode purposes
     @media (prefers-reduced-motion) { transition: none; }
