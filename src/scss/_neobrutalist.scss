@@ -1,0 +1,672 @@
+:root {
+  --neo-border: #09090b;
+  --neo-card-bg: #ffffff;
+  --neo-text: #09090b;
+  --neo-text-secondary: #3f3f46;
+  --neo-shadow-color: #09090b;
+  --neo-shadow: 4px 4px 0px var(--neo-shadow-color);
+  --neo-shadow-sm: 2.5px 2.5px 0px var(--neo-shadow-color);
+  --neo-shadow-hover: 1.5px 1.5px 0px var(--neo-shadow-color);
+  --neo-chip-bg: #ffffff;
+  --neo-chip-border: #09090b;
+  --neo-chip-text: #09090b;
+  --neo-date-bg: #ffffff;
+}
+
+.dark-mode {
+  --neo-border: #e4e4e7;
+  --neo-card-bg: #141622;
+  --neo-text: #f4f4f6;
+  --neo-text-secondary: #cbd5e1;
+  --neo-shadow-color: #000000;
+  --neo-shadow: 4px 4px 0px var(--neo-shadow-color);
+  --neo-shadow-sm: 2.5px 2.5px 0px var(--neo-shadow-color);
+  --neo-shadow-hover: 1.5px 1.5px 0px var(--neo-shadow-color);
+  --neo-chip-bg: #1f2232;
+  --neo-chip-border: #3b3f54;
+  --neo-chip-text: #f4f4f6;
+  --neo-date-bg: #1f2232;
+}
+
+/* Page Print Setup: generous top clearance so page breaks never touch the top edge */
+@page {
+  margin: 20mm;
+  size: A4 portrait;
+}
+
+
+.neo-layout {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 1.5rem 3rem 6rem;
+  font-family: var(--font-family);
+  color: var(--neo-text);
+  box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    padding: 1rem 1rem 4rem;
+  }
+
+  /* Accessibility skip link */
+  .neo-skip-link {
+    position: absolute;
+    top: -100px;
+    left: 1rem;
+    padding: 0.5rem 1rem;
+    background: #fef08a;
+    color: #18181b;
+    border: 2px solid var(--neo-border);
+    font-weight: 800;
+    z-index: 999;
+    transition: top 0.2s ease;
+
+    &:focus {
+      top: 1rem;
+    }
+  }
+
+  /* Top Controls Bar */
+  .neo-controls-bar {
+    position: sticky;
+    top: 1rem;
+    z-index: 100;
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    pointer-events: none;
+
+    .neo-control-btn {
+      pointer-events: auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.45rem 1rem;
+      background: #fef08a;
+      color: #18181b;
+      border: 2px solid var(--neo-border);
+      box-shadow: 3px 3px 0px var(--neo-shadow-color);
+      border-radius: 6px;
+      font-family: inherit;
+      font-size: 0.85rem;
+      font-weight: 800;
+      cursor: pointer;
+      transition: all 0.15s ease;
+
+      &:hover {
+        transform: translate(2px, 2px);
+        box-shadow: 1px 1px 0px var(--neo-shadow-color);
+      }
+
+      &.print-btn {
+        background: #67e8f9;
+        color: #083344;
+      }
+    }
+  }
+
+  /* Neo Box Base */
+  .neo-box {
+    background: var(--neo-card-bg);
+    border: 2.5px solid var(--neo-border);
+    box-shadow: var(--neo-shadow);
+    border-radius: 8px;
+    padding: 1.75rem 2rem;
+    position: relative;
+    transition: all 0.15s ease;
+
+    @media (max-width: 640px) {
+      padding: 1.25rem;
+    }
+  }
+
+  /* Color accents: crisp black text for maximum high-contrast legibility */
+  .yellow { background: #fef08a !important; color: #18181b !important; }
+  .cyan { background: #67e8f9 !important; color: #083344 !important; }
+  .mint { background: #86efac !important; color: #052e16 !important; }
+  .pink { background: #f472b6 !important; color: #500724 !important; }
+  .lavender { background: #c084fc !important; color: #3b0764 !important; }
+  .orange { background: #fb923c !important; color: #431407 !important; }
+
+  /* Hero */
+  .neo-hero {
+    margin-bottom: 2.5rem;
+
+    .neo-sticker-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-bottom: 0.85rem;
+
+      .neo-sticker {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        padding: 0.35rem 0.75rem;
+        border: 2px solid var(--neo-border);
+        box-shadow: 2.5px 2.5px 0px var(--neo-shadow-color);
+        border-radius: 4px;
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 0.04em;
+      }
+    }
+
+    .neo-name {
+      font-size: 3.5rem;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      margin: 0 0 0.35rem;
+      color: var(--neo-text);
+
+      @media (max-width: 768px) {
+        font-size: 2.5rem;
+      }
+    }
+
+    .neo-subhead {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--neo-text-secondary);
+      margin: 0 0 1.5rem;
+
+      @media (max-width: 768px) {
+        font-size: 1.15rem;
+      }
+    }
+
+    .neo-links-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+
+      .neo-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 1.1rem;
+        background: var(--neo-card-bg);
+        border: 2px solid var(--neo-border);
+        box-shadow: 3px 3px 0px var(--neo-shadow-color);
+        border-radius: 6px;
+        color: var(--neo-text);
+        font-size: 0.88rem;
+        font-weight: 700;
+        text-decoration: none;
+        transition: all 0.15s ease;
+
+        .ext {
+          font-size: 0.7rem;
+        }
+
+        &:hover {
+          transform: translate(2px, 2px);
+          box-shadow: 1px 1px 0px var(--neo-shadow-color);
+          background: #fef08a;
+          color: #18181b;
+          border-color: var(--neo-border);
+        }
+      }
+    }
+  }
+
+  /* Summary Box */
+  .neo-summary {
+    margin-bottom: 3.5rem;
+
+    .neo-box-label {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 900;
+      padding: 0.25rem 0.65rem;
+      border: 2px solid var(--neo-border);
+      border-radius: 4px;
+      margin-bottom: 1rem;
+      letter-spacing: 0.05em;
+    }
+
+    .neo-lead {
+      font-size: 1.15rem;
+      line-height: 1.65;
+      color: var(--neo-text);
+      margin: 0 0 1.5rem;
+
+      strong {
+        text-decoration: underline;
+        text-decoration-thickness: 3px;
+        text-decoration-color: #67e8f9;
+      }
+    }
+
+    .neo-pill-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+
+      .neo-tag {
+        display: inline-block;
+        padding: 0.35rem 0.8rem;
+        border: 2px solid var(--neo-border);
+        box-shadow: 2px 2px 0px var(--neo-shadow-color);
+        border-radius: 4px;
+        font-size: 0.82rem;
+        font-weight: 800;
+      }
+    }
+  }
+
+  /* Sections */
+  .neo-section {
+    margin-bottom: 4rem;
+
+    .neo-section-header {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      margin-bottom: 1.75rem;
+
+      .neo-icon-box {
+        width: 42px;
+        height: 42px;
+        border: 2.5px solid var(--neo-border);
+        box-shadow: 3px 3px 0px var(--neo-shadow-color);
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+      }
+
+      .neo-section-title {
+        font-size: 1.5rem;
+        font-weight: 900;
+        letter-spacing: -0.01em;
+        margin: 0;
+        color: var(--neo-text);
+      }
+    }
+  }
+
+  /* Skills Grid at 1440px */
+  .neo-skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+
+    .neo-skill-card {
+      .neo-box-label {
+        display: inline-block;
+        font-size: 0.8rem;
+        font-weight: 900;
+        padding: 0.25rem 0.65rem;
+        border: 2px solid var(--neo-border);
+        border-radius: 4px;
+        margin-bottom: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+      }
+
+      .neo-chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.45rem;
+
+        .neo-chip {
+          padding: 0.25rem 0.65rem;
+          background: var(--neo-chip-bg);
+          border: 1.5px solid var(--neo-chip-border);
+          border-radius: 4px;
+          font-size: 0.82rem;
+          font-weight: 600;
+          color: var(--neo-chip-text);
+          box-shadow: 1.5px 1.5px 0px var(--neo-shadow-color);
+          transition: all 0.15s ease;
+
+          &:hover {
+            transform: translate(1px, 1px);
+            box-shadow: none;
+            background: #67e8f9;
+            color: #083344;
+            border-color: var(--neo-border);
+          }
+        }
+      }
+    }
+  }
+
+  /* Experience Feed */
+  .neo-exp-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+
+    .neo-exp-item {
+      .neo-exp-top {
+        margin-bottom: 0.85rem;
+
+        .neo-job-title {
+          font-size: 1.35rem;
+          font-weight: 800;
+          margin: 0 0 0.5rem;
+          color: var(--neo-text);
+        }
+
+        .neo-company-row {
+          display: flex;
+          align-items: center;
+          gap: 0.6rem;
+          flex-wrap: wrap;
+
+          .neo-company-badge {
+            background: #fef08a;
+            color: #18181b;
+            border: 1.5px solid var(--neo-border);
+            padding: 0.2rem 0.65rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 800;
+          }
+
+          .neo-date-stamp {
+            background: var(--neo-date-bg);
+            border: 1.5px solid var(--neo-chip-border);
+            color: var(--neo-text-secondary);
+            padding: 0.2rem 0.65rem;
+            border-radius: 4px;
+            font-size: 0.82rem;
+            font-weight: 600;
+          }
+        }
+      }
+
+      .neo-job-desc {
+        font-size: 1rem;
+        line-height: 1.65;
+        color: var(--neo-text);
+
+        p {
+          margin: 0 0 0.85rem;
+        }
+
+        ul {
+          margin: 0;
+          padding-left: 1.5rem;
+
+          li {
+            margin-bottom: 0.5rem;
+            strong {
+              font-weight: 800;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* Education Grid */
+  .neo-edu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 1.5rem;
+
+    .neo-edu-card {
+      .neo-box-label {
+        display: inline-block;
+        font-size: 0.72rem;
+        font-weight: 800;
+        padding: 0.15rem 0.5rem;
+        border: 1.5px solid var(--neo-border);
+        border-radius: 3px;
+        margin-bottom: 0.45rem;
+      }
+
+      .neo-inst-name {
+        display: block;
+        font-size: 0.9rem;
+        font-weight: 800;
+        color: var(--neo-text);
+        margin-bottom: 0.3rem;
+      }
+
+      .neo-edu-subject {
+        font-size: 1.05rem;
+        font-weight: 800;
+        margin: 0 0 0.6rem;
+        color: var(--neo-text);
+      }
+
+      .neo-edu-desc {
+        font-size: 0.88rem;
+        line-height: 1.55;
+        color: var(--neo-text-secondary);
+
+        p {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+/* =========================================
+   COMPREHENSIVE PRINT OPTIMIZATION
+   ========================================= */
+@media print {
+  *, *::before, *::after {
+    box-shadow: none !important;
+    text-shadow: none !important;
+    transition: none !important;
+  }
+
+  html, body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .neo-layout {
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    padding: 8mm 8mm !important; // Balanced edge breathing room
+    background: #ffffff !important;
+    color: #000000 !important;
+
+    .neo-controls-bar,
+    .neo-skip-link {
+      display: none !important;
+    }
+
+    /* Page Break Utility Classes */
+    .print-break-before {
+      break-before: page !important;
+      page-break-before: always !important;
+      padding-top: 10mm !important; // Guaranteed breathing room at the top of the new page
+    }
+
+    .print-break-after {
+      break-after: page !important;
+      page-break-after: always !important;
+    }
+
+    .print-no-break {
+      break-inside: avoid !important;
+      page-break-inside: avoid !important;
+    }
+
+    /* Prevent orphaned headings at the bottom of a printed page */
+    h1, h2, h3, h4,
+    .neo-section-header,
+    .neo-section-title,
+    .neo-exp-top {
+      break-after: avoid !important;
+      page-break-after: avoid !important;
+    }
+
+    .neo-hero {
+      margin-bottom: 1.25rem !important;
+      break-inside: avoid !important;
+      page-break-inside: avoid !important;
+
+      .neo-name {
+        font-size: 2.4rem !important;
+        color: #000000 !important;
+      }
+
+      .neo-subhead {
+        font-size: 1.1rem !important;
+        color: #333333 !important;
+        margin-bottom: 0.75rem !important;
+      }
+
+      .neo-btn {
+        border-color: #000000 !important;
+        background: #ffffff !important;
+        color: #000000 !important;
+        padding: 0.35rem 0.75rem !important;
+        font-size: 0.8rem !important;
+      }
+    }
+
+    .neo-box {
+      background: #ffffff !important;
+      color: #000000 !important;
+      border: 1.5px solid #000000 !important;
+      box-shadow: none !important;
+      margin-top: 4mm !important; // Top clearance when a card lands at the top of a new page
+      margin-bottom: 1.25rem !important;
+      padding: 1.1rem 1.35rem !important;
+      break-inside: avoid !important;
+      page-break-inside: avoid !important;
+    }
+
+    .neo-summary {
+      margin-bottom: 1.5rem !important;
+
+      .neo-lead {
+        font-size: 0.98rem !important;
+        line-height: 1.55 !important;
+        color: #000000 !important;
+        margin-bottom: 0.75rem !important;
+      }
+
+      .neo-pill-strip {
+        gap: 0.4rem !important;
+
+        .neo-tag {
+          font-size: 0.75rem !important;
+          padding: 0.2rem 0.55rem !important;
+          border-width: 1px !important;
+        }
+      }
+    }
+
+    .neo-section {
+      margin-bottom: 1.5rem !important;
+      padding-top: 6mm !important; // Padding never collapses across page boundaries, ensuring room above sections
+
+      .neo-section-header {
+        margin-top: 0 !important;
+        margin-bottom: 1rem !important;
+      }
+    }
+
+    /* Skills Grid in print: 3 neat columns */
+    .neo-skills-grid {
+      grid-template-columns: repeat(3, 1fr) !important;
+      gap: 0.85rem !important;
+
+      .neo-skill-card {
+        padding: 0.85rem 1rem !important;
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+
+        .neo-box-label {
+          font-size: 0.72rem !important;
+          margin-bottom: 0.5rem !important;
+        }
+
+        .neo-chips {
+          gap: 0.3rem !important;
+
+          .neo-chip {
+            background: #ffffff !important;
+            border: 1px solid #333333 !important;
+            color: #000000 !important;
+            box-shadow: none !important;
+            font-size: 0.75rem !important;
+            padding: 0.15rem 0.45rem !important;
+          }
+        }
+      }
+    }
+
+    .neo-exp-list {
+      gap: 1.25rem !important;
+    }
+
+    .neo-exp-item {
+      break-inside: avoid !important;
+      page-break-inside: avoid !important;
+      break-before: auto !important;
+      margin-bottom: 1rem !important;
+      padding-top: 4mm !important; // Breathing room when card lands at top of a new page
+
+      .neo-job-title {
+        font-size: 1.15rem !important;
+        color: #000000 !important;
+      }
+
+      .neo-job-desc {
+        font-size: 0.92rem !important;
+        line-height: 1.55 !important;
+        color: #000000 !important;
+
+        p {
+          margin-bottom: 0.5rem !important;
+        }
+
+        ul {
+          padding-left: 1.25rem !important;
+
+          li {
+            margin-bottom: 0.35rem !important;
+          }
+        }
+      }
+
+      .neo-date-stamp {
+        background: #f4f4f5 !important;
+        color: #333333 !important;
+        border-color: #666666 !important;
+        font-size: 0.75rem !important;
+      }
+
+      &.print-margin-top {
+        position: relative;
+        top: 2rem;
+      }
+    }
+
+    .neo-edu-grid {
+      grid-template-columns: repeat(3, 1fr) !important;
+      gap: 0.85rem !important;
+
+      .neo-edu-card {
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+        padding: 0.85rem 1rem !important;
+
+        .neo-inst-name,
+        .neo-edu-subject {
+          color: #000000 !important;
+        }
+
+        .neo-edu-desc {
+          color: #333333 !important;
+          font-size: 0.82rem !important;
+        }
+      }
+    }
+  }
+}
