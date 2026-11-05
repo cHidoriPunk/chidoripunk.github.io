@@ -1,3 +1,23 @@
-@use 'scss/style';
-@use 'scss/timeline';
-@use 'scss/darkmode';
+@use 'scss/theme';
+@use 'scss/neobrutalist';
+
+:root {
+  --neo-page-bg: #f4f4f5;
+}
+
+.dark-mode {
+  --neo-page-bg: #0a0b10;
+}
+
+html {
+  background-color: var(--neo-page-bg);
+  transition: background-color 0.25s ease;
+}
+
+body {
+  background-color: var(--neo-page-bg);
+  color: var(--neo-text, #09090b);
+  transition: background-color 0.25s ease, color 0.25s ease;
+  min-height: 100vh;
+  margin: 0;
+}
