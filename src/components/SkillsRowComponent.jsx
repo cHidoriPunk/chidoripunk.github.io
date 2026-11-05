@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 const SkillsRowComponent = ({skillsRow}) => (
   <article className="timeline-item">
     <div className="timeline-content">
-      <p>{skillsRow.name}</p>
+      <p dangerouslySetInnerHTML={{ __html: skillsRow.name }} />
     </div>
   </article>
 );

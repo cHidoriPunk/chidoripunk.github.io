@@ -29,14 +29,14 @@ function App() {
         <div className="col">
           <header className="main-header">
             <h1>Daniel Kalaora</h1>
-            <h2>Front End Web Developer</h2>
+            <h2>Full-Stack Web Developer · Front-End Focus</h2>
           </header>
           <main className="main-section">
             <section className="info">
               {infoRowsData.map((infoRow) => (
                 <InfoRowComponent infoRow={infoRow} key={infoRow.key} />
               ))}
-              <p className="lead">An experienced Web developer with motivation &amp; drive, a curious autodidact &amp; a team player.</p>
+              <p className="lead">Full-stack web developer with 10+ years of experience building high-traffic, regulated, multilingual sites. I work across C#/Razor, SCSS and vanilla JS, with a focus on performance, analytics and reusable components.</p>
             </section>
             <div id="mainContent"></div>
             <section className="timeline">
