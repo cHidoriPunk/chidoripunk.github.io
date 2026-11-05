@@ -1,9 +1,9 @@
 [
     {
         "key": 1,
-        "jobTitle": "Front End Web Developer, R&D design team.",
+        "jobTitle": "Full-Stack Web Developer (Front-End Focus)",
         "jobDates": "<em>Plus500 <small>(2018 - present day)</small></em>",
-        "jobDescription": "<p>Working with a team of designers / developers that are responsible for Plus500's products: main website, affiliates website, web trader, Native applications (iOS, Android), Email design implementation (Email client compatability) & inner applications that are used by several teams.</p><p>I've helped maintaining an email builder interface that is used by content team to build Emails & export the markup into localization.<br>I was also in charge of <a href=\"https://www.plus500.co.uk\" target=\"_blank\" rel=\"noreferrer\">Plus500 website</a> (regulated, multilingual, dark theme supported, accessible). Covered both frontend & backend (CSHTML, SCSS, .NET C#) in an MVC paradigm, by doing so saved time & resources of other teams.<p><p>Learned how to manage NPM packages & NodeJS, implemented Gulp task runner script which took care of SASS (compilation), JS (minification & bundling).</p><p>Perfected website load time using Lighthouse auditing tool: font load delivery, images lazy load optimization of styles (with component driven design).</p><p>Worked with Bootstrap 3-5 & Zurb's Foundation CSS frameworks.</p><p>Built Chrome extensions that helped me complete tedious tasks and saved me precious time.</p>"
+        "jobDescription": "<p>Lead front-end web development for public-facing, highly regulated, and multi-regional platforms serving millions of international users. Work across C#/Razor (ASP.NET MVC), modern JavaScript, and SCSS to build high-performance, accessible, and localized web experiences.</p><ul><li><strong>Performance & Optimization:</strong> Led front-end performance overhauls across high-traffic core pages (lazy loading, caching strategies, asset preloading, and CI-based performance audits), significantly improving Core Web Vitals and load times.</li><li><strong>Reusable Component Architecture:</strong> Engineered modular, reusable UI widgets and interactive components shared across multiple international portals and product sites.</li><li><strong>Analytics & Tracking:</strong> Managed and streamlined event tracking and telemetry migrations (GA4, GTM), ensuring reliable data pipelines for marketing and business intelligence.</li><li><strong>Build Tooling & Developer Experience:</strong> Modernized build pipelines by transitioning front-end builds from legacy task runners to Vite, drastically reducing build times and improving local dev workflow.</li><li><strong>Design Systems & Localization:</strong> Implemented design system standards across key customer journeys, delivering fully responsive, dark-mode, and RTL/multilingual localized interfaces compliant with WCAG accessibility standards.</li><li><strong>SEO & Technical Standards:</strong> Implemented technical SEO best practices, structured data (JSON-LD), and core landing page optimizations.</li><li><strong>Team & Best Practices:</strong> Authored technical documentation, developer guidelines, and shared best practices for AI-assisted development across engineering workflows.</li></ul>"
     },
     {
         "key": 2,
@@ -15,18 +15,12 @@
         "key": 3,
         "jobTitle": "Front End Developer",
         "jobDates": "<em>Microline systems, web developers team. <small>(2014 - 2016)</small></em>",
-        "jobDescription": "<p>Created a unique accessibility tool for the company which covered 65% of WCGA AA requirements. I was in charge of website innovation, required research on my part in UX \/ UI. Helped implementing methods for Google Analytics Events, later on with Google's Tag Manager. Implemented several jQuery galleries & plugins, also wrote some of my own.\r\n Customized the \"Bsmart\" application backend system for the client needs.<\/p><p>Learned working with Bootstrap, perfected JavaScript & jQuery Skills. Mainly worked with XSLT, HTML5, ASP, CSS, JavaScript & jQuery.<\/p>"
+        "jobDescription": "<p>Created a unique accessibility tool for the company which covered 65% of WCAG AA requirements. I was in charge of website innovation, required research on my part in UX / UI. Helped implementing methods for Google Analytics Events, later on with Google's Tag Manager. Implemented several jQuery galleries & plugins, also wrote some of my own.\r\n Customized the \"Bsmart\" application backend system for the client needs.</p><p>Learned working with Bootstrap, perfected JavaScript & jQuery Skills. Mainly worked with XSLT, HTML5, ASP, CSS, JavaScript & jQuery.</p>"
     },
     {
         "key": 4,
-        "jobTitle": "Webmaster",
-        "jobDates": "<em>Studio-Sparkle, Web design. <small>(2008 - 2014)</small></em>",
-        "jobDescription": "<p>Installation, maintenance & customization of Drupal, Joomla & WordPress websites. Worked with Cpanel, Control Web Panel (opensource web panel), Plesk & DirectAdmin.</p><p>Creation of landing pages.</p>"
-    },
-    {
-        "key": 5,
-        "jobTitle": "Web designer",
-        "jobDates": "<em>Freelance. <small>(2010 - 2013)</small></em>",
-        "jobDescription": "<p>Worked as a freelance web developer, mainly created static HTML / CSS websites & landing pages.</p>"
+        "jobTitle": "Webmaster & Freelance Web Designer",
+        "jobDates": "<em>Studio-Sparkle and freelance <small>(2008 - 2014)</small></em>",
+        "jobDescription": "<p>Installed, maintained and customized Drupal, Joomla and WordPress sites. Built static HTML/CSS websites and landing pages. Worked with cPanel, Control Web Panel, Plesk and DirectAdmin.</p>"
     }
 ]
