@@ -6,12 +6,12 @@
     },
     {
         "key": 2,
-        "courseTitle": "Appleseeds Academy, web developer, Course Diploma.",
+        "courseTitle": "Appleseeds Academy, Web developer, Course Diploma.",
         "courseDescription": "<p>Learned HTML5, CSS3 & the basics of JavaScript, jQuery, PHP, MySQL.<\/p>"
     },
     {
         "key": 3,
-        "courseTitle": "Tiltan College, web design, Participation Diploma.",
+        "courseTitle": "Tiltan College, Web design, Participation Diploma.",
         "courseDescription": "<p>Learned the fundamentals of web development & design, HTML, CSS, Photoshop, Illustrator, Flash & Indesign.<\/p>"
     }
 ]
