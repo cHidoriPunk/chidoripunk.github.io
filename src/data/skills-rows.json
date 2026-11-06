@@ -1,9 +1,9 @@
 [
-    { "key": 1, "name": "<strong>Front-end:</strong> HTML5, HTML for emails, CSS3, SCSS, vanilla JavaScript (ES6+), NodeJS/NPM, Gulp, Vite, jQuery, Vue2, React" },
+    { "key": 1, "name": "<strong>Front-end:</strong> HTML5, HTML for emails, CSS3, SCSS, jQuery, Vanilla JavaScript (ES6+), NodeJS/NPM, Gulp, Vite, VueJS(2,3), React" },
     { "key": 2, "name": "<strong>Back-end:</strong> C#, ASP.NET MVC (Razor), WebForms, PHP, MySQL" },
-    { "key": 3, "name": "<strong>Performance and SEO:</strong> Core Web Vitals, Lighthouse CI, lazy loading and caching, structured data" },
-    { "key": 4, "name": "<strong>Analytics:</strong> GA4, GTM, BigQuery" },
-    { "key": 5, "name": "<strong>Quality and delivery:</strong> accessibility (WCAG), i18n / RTL, GitHub, GitHub Actions, Cloudflare" },
-    { "key": 6, "name": "<strong>AI-assisted development:</strong> AntiGravity, Cluade Code, GitHub Copilot instructions and reviews" },
+    { "key": 3, "name": "<strong>Performance and SEO:</strong> Core Web Vitals, Lighthouse CI, Prelaoding, Prefetching, Lazy load and Caching mechanisms, Structured data (Schema)" },
+    { "key": 4, "name": "<strong>Analytics:</strong> GTM, GA4, BigQuery" },
+    { "key": 5, "name": "<strong>Quality and delivery:</strong> Accessibility (WCAG), i18n / RTL, GitHub, GitHub Actions, Cloudflare" },
+    { "key": 6, "name": "<strong>AI-assisted development:</strong> AntiGravity, Cluade Code, GitHub Copilot" },
     { "key": 7, "name": "<strong>Also:</strong> Java/Android basics, Arduino / Raspberry Pi / ESP32" }
 ]
