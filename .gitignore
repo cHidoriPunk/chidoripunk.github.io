@@ -1,4 +1,5 @@
 .idea/
+.impeccable
 .vscode/
 node_modules/
 build
