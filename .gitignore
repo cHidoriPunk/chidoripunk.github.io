@@ -1,5 +1,8 @@
+.github/agents/
+.github/hooks/
+.github/skills/
 .idea/
-.impeccable
+.impeccable/
 .vscode/
 node_modules/
 build
